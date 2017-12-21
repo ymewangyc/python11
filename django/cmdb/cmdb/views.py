@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# from django.http import HttpResponse
-#
-#
-# def hello(request):
-#     return HttpResponse("Hello world ! ")
 
+from django.http import HttpResponse
 from django.shortcuts import render
 
+'''
+def hello(request):
+    return HttpResponse("Hello world ! ")
+'''
 
 def hello(request):
     context = {}
