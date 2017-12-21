@@ -15,5 +15,11 @@
         <property name="yearIsDateType" value="false" />
       </driver-properties>
     </data-source>
+    <data-source source="LOCAL" name="local.sqlite" uuid="8f27672e-2529-4f75-a8db-2f1e3912deba">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/django/cmdb/ruoob.sqlite3</jdbc-url>
+    </data-source>
   </component>
 </project>
