@@ -30,4 +30,5 @@ urlpatterns = [
     url(r'^search-form$', search_form),
     url(r'^search$', search),
     url(r'^search-post$', search_post),
+    url(r'^look$', testdb.chaxun),
 ]

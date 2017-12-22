@@ -3,6 +3,7 @@
 from django.http import HttpResponse
 
 from TestModel.models import Test
+from django.shortcuts import render
 
 
 # 数据库操作
@@ -40,8 +41,23 @@ def chaxun(request):
     # 输出所有数据
     for var in list:
         response1 += var.name + " "
-    response = response1
+
+    '''原来返回的结果
+    response = {}
+    response['hello'] = response1
     return HttpResponse("<p>" + response + "</p>")
+    '''
+    # response['hello'] = 'Hello World!'
+    # response['hello'] = [1,2,3,4]
+    response['hello'] = {'name':'java','pwd':'123'}
+
+    # newlist = {'Alice': '2341', 'Beth': '9102', 'Cecil': '3258'}
+    return render(request, "look.html", response)
+
+# def hello(request):
+#     context = {}
+#     context['hello'] = 'Hello World!'
+#     return render(request, 'hello.html', context)
 
 
 
